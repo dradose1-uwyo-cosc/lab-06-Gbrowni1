@@ -1,12 +1,9 @@
-# Your Name Here
+# Grant Browning
 # UWYO COSC 1010
-# Submission Date
+# Submission Date: 10.10.24
 # Lab 06
 # Lab Section: 
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
 
 
 random_string = """
@@ -64,8 +61,22 @@ zkdenxczyooloczcaahnkehbwimvieedpdlqfafbqvxvfmvabd
 random_string = random_string.replace("\n","") #remove all newline characters
 print(len(random_string)) # Print out the size for reference 
 
+
+
 # Above is a string with 2500 characters.
 # Create a program that goes through and counts the occurrence of each character, excluding \n using a  dictionary
+
+#r_string_cnt = {x:random_string.count(x) for x in set(random_string)}
+#print(str(r_string_cnt))
+
+randostring_count = {}
+for ele in random_string:
+    if ele in randostring_count:
+        randostring_count[ele] += 1
+    else:
+        randostring_count[ele] = 1
+print(str(randostring_count))
+print(sorted(str(randostring_count)))
 # Output each letter and its corresponding occurrence in alphabetical order
 # Output which letter occurred the most 
 # Output which letter occurred the least 
